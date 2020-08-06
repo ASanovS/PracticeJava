@@ -12,17 +12,8 @@ public class Main {
         int x = scanner.nextInt();
         int y = scanner.nextInt();
 
-        System.out.printf("Максимальное число = %d \n",max(x, y));
-        System.out.printf("Минимальное число = %d \n",min(x, y));
-        System.out.printf("Максимально число = %d, минимальное число = %d", max(x, y) , min(x, y));
-
-    }
-
-    static int min(int x, int y) {
-        return Math.min(x, y);
-    }
-
-    static int max(int x, int y) {
-        return Math.max(x, y);
+        System.out.printf("Максимальное число = %d \n",Math.max(x, y));
+        System.out.printf("Минимальное число = %d \n",Math.min(x, y));
+        System.out.printf("Максимально число = %d, минимальное число = %d", Math.max(x, y) , Math.min(x, y));
     }
 }
