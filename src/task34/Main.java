@@ -9,6 +9,7 @@ public class Main {
         int y = scanner.nextInt();
         int z = scanner.nextInt();
 
-        System.out.printf("Максимально число из трех = %d", x > y && x > z ? x : y > x && y > z ? y : z);
+        System.out.printf("Максимально число из трех = %d \n", x > y && x > z ? x : y > x && y > z ? y : z);
+        System.out.printf("Минимальное число из трех = %d", x <y && x < z ? x : y < x && y < z ? y : z);
     }
 }
