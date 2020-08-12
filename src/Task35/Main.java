@@ -9,6 +9,10 @@ public class Main {
         int y = scanner.nextInt();
         int z = scanner.nextInt();
 
+        int max = Math.max(x + y + z, x * y * z);
+        int min = Math.min(x + y + z / 2, x * y * z);
 
+        System.out.printf("Max = %d\n", max);
+        System.out.printf("Min = %d", (min*min) + 1);
     }
 }
