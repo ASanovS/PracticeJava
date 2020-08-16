@@ -14,6 +14,20 @@ public class Main {
         int y = scanner.nextInt();
         int z = scanner.nextInt();
 
+        if (x + y + z < 1) {
+            if (x < y && x < z) {
+                x = (y + z) / 2;
+            } else if (y < x && y < z) {
+                y = (x + z) / 2;
+            } else {
+                z = (x + y) / 2;
+            }
+        } else if (x < y) {
+            x = (y + z) / 2;
+        } else {
+            y = (x + z) / 2;
+        }
 
+        System.out.printf("x = %d, y = %d, z = %d", x, y, z);
     }
 }
