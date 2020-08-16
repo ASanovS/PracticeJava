@@ -8,16 +8,6 @@ public class Main {
         double x = scanner.nextInt();
         double y = scanner.nextInt();
 
-        System.out.printf("|x|-|y| / 1+|x*y| = %s", equationSolution(x, y));
-    }
-
-    static double equationSolution(double x, double y) {
-        double firsPart = moduleNumber(x) - moduleNumber(y);
-        double secondPart = 1 + (moduleNumber(x) * moduleNumber(y));
-        return firsPart / secondPart;
-    }
-
-    static double moduleNumber(double number) {
-        return number < 0 ? number * -1 : number;
+        System.out.printf("|x|-|y| / 1+|x*y| = %s", (Math.abs(x) - Math.abs(y)) / (1 + Math.abs(x) * Math.abs(y)));
     }
 }

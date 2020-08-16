@@ -15,13 +15,9 @@ public class Main {
             System.out.printf("a = %d, b = %d, c = %d", a * 2, b * 2, c * 2);
         } else {
             System.out.printf("a = %d, b = %d, c = %d",
-                    numberByAbsoluteValue(a),
-                    numberByAbsoluteValue(b),
-                    numberByAbsoluteValue(c));
+                    Math.abs(a),
+                    Math.abs(b),
+                    Math.abs(c));
         }
-    }
-
-    static int numberByAbsoluteValue(int a) {
-        return a < 0 ? a * -1 : a;
     }
 }
