@@ -7,6 +7,10 @@ package task41;
 public class Main {
     public static void main(String[] args) {
         int[] mas = {1, 3, 5};
-        System.out.println(mas[0] + " " + mas[2]);
+        for (int m : mas) {
+            if (m < 4) {
+                System.out.printf("%d ", m);
+            }
+        }
     }
 }
