@@ -34,8 +34,10 @@ public class Main {
                 three++;
             }
         }
+
         int swapFirstLast = (lastNum * (remainder / 10) + number % remainder / 10) * 10 + firstNum;
         int addNumOne = (10 * remainder + number) * 10 + 1;
+
         System.out.printf("Цыфра 3 %s в квадрат чиста %d \n" +
                         "Обратный порядок числа %d => %d \n" +
                         "Перестановка первой и последней цифры числа %d местами => %d \n" +
