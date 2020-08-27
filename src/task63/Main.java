@@ -15,7 +15,7 @@ public class Main {
         int r = scanner.nextInt();
         int s = scanner.nextInt();
 
-        if (a % b == r | a % b == s) {
+        if (a % b == r || a % b == s) {
             System.out.println("True");
         } else {
             System.out.println("False");

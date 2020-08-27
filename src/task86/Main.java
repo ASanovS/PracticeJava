@@ -1,14 +1,12 @@
 package task86;
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Scanner;
 
 /**
- * Дано натуральное число я.
- * а) Сколько цифр в числе я?
+ * Дано натуральное число n
+ * а) Сколько цифр в числе n?
  * б) Чему равна сумма его цифр?
- * в) Найти первую цифру числа я.
+ * в) Найти первую цифру числа n
  * г) Найти знакочередующуюся сумму цифр числа n (пусть
  * запись n в десятичной системе есть ak ak_i . . .о0; найти ak —
  * -ak-1 +... +( — l)ka0).
@@ -17,24 +15,11 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
-        int count = 0;
-        int sumNum = 0;
-        int first = 0;
-        int alternatingNum = 0; //знакочередующаяся сумма числа
 
-        for (int i = number; i > 0; i = i / 10) {
-            count++;
-            first = i % 10;
-            sumNum = sumNum + first;
-            if (count % 2 != 0) {
-                alternatingNum = alternatingNum + first;
-            }else {
-                alternatingNum = alternatingNum - first;
-            }
-        }
-        System.out.printf("Количество цифр в числе = %d, \n" +
-                "Сумма цифр в числе = %d, \n" +
-                "Первая цифра в числе = %d, \n" +
-                "Знакочередующуяся сумма числа = %d", count, sumNum, first, alternatingNum);
+        System.out.printf("Сколько цифр в числе %d = %d\n", number, MainA.countNums(number));
+        System.out.printf("Сумма цифр числа %d = %d\n", number, MainB.sumNums(number));
+        System.out.printf("Первая цифра числа %d = %d\n", number, MainC.firstNum(number));
+        System.out.printf("Знакочередующуюся сумма числа %d = %d\n", number, MainD.alternatingSum(number));
     }
 }
+

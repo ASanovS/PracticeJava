@@ -53,11 +53,9 @@ public class Main {
                     seven == 3 | eight == 3 | nine == 3) {
                 System.out.printf("Число %d содержит три одинаковые цифры\n", number);
             } else if (number % 10 != number % 100 / 10 &
-                    number% 100 / 10 != number % 1000 / 100 &
+                    number % 100 / 10 != number % 1000 / 100 &
                     number % 1000 / 100 != number % 10000 / 1000) {
                 System.out.printf("Число %d содержит все разные цифры", number);
-            } else {
-                System.out.printf("Вы ввели число %d", number);
             }
         } else {
             System.out.printf("Вы ввели число %d", number);

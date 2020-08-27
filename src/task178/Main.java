@@ -23,12 +23,24 @@ public class Main {
         }
 
         for (int m : array) {
-            System.out.printf("Число %d %s \n" , m, m % 2 == 0 ? "четное" : "не четное");
+            System.out.printf("Число %d %s \n", m, m % 2 == 0 ? "четное" : "не четное");
             if (m % 3 == 0 & m % 5 != 0) {
                 System.out.printf("Число %d кратное 3 и не кратное 5\n", m);
             }
             if (Math.sqrt(m) % 2 == 0) {
                 System.out.printf("Число %d является квадратом четного числа\n", m);
+            }
+        }
+
+        for (int i = 1; i < array.length - 1; i++) {
+            if (2 * i < array[i] & array[i] < i ){
+                System.out.printf("Число %d удовлетворяет условие a.k < (a.k-1 + a.k+1 / 2 )", array[i]);
+            }
+        }
+
+        for (int i = 1; i < array.length - 1; i++) {
+            if (array[i] < (array[i - 1] + array[i + 1]) / 2) {
+                System.out.printf("Число %d удовлетворяет условие  2^k < a.k < k!", array[i]);
             }
         }
 
