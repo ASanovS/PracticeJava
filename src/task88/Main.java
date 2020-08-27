@@ -13,38 +13,10 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
-        int numSquare = number * number;
-        int revers = 0;
-        int three = 0;
-        int firstNum = 0;
-        int lastNum = number % 10;
-        int remainder = 1;
 
-        for (int i = number / 10; i > 0; i /= 10) {
-            remainder *= 10;
-        }
-
-        for (int i = number; i > 0; i /= 10) {
-            revers = revers * 10 + i % 10;
-            firstNum = i % 10;
-        }
-
-        for (int i = numSquare; i > 0; i /= 10) {
-            if (i % 10 == 3) {
-                three++;
-            }
-        }
-
-        int swapFirstLast = (lastNum * (remainder / 10) + number % remainder / 10) * 10 + firstNum;
-        int addNumOne = (10 * remainder + number) * 10 + 1;
-
-        System.out.printf("Цыфра 3 %s в квадрат чиста %d \n" +
-                        "Обратный порядок числа %d => %d \n" +
-                        "Перестановка первой и последней цифры числа %d местами => %d \n" +
-                        "Приписать по единице к числу %d в начало и конец => %d",
-                three > 0 ? "входит" : "не входит", number,
-                number, revers,
-                number, swapFirstLast,
-                number, addNumOne);
+        System.out.printf("Входит число 3 в корен числа %d => %b\n", number, MainA.numSquare(number));
+        System.out.printf("Обратный порядок числа %d => %d \n", number, MainB.revers(number));
+        System.out.printf("Перестановка первой и последней цифры числа %d местами => %d \n", number, MainC.swapFirstLast(number));
+        System.out.printf("Приписать по единице к числу %d в начало и конец => %d", number, MainD.addNumOne(number));
     }
 }
