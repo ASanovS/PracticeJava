@@ -8,7 +8,7 @@ import java.util.Random;
  * a) являются удвоенными нечетными числами;
  * b) при делении на 7 дают остаток 1, 2 или 5;
  * c) обладают тем свойством, что корни уравнения
- * х24-3f t — 5 действительны и положительны.
+ * х^2 + 3q.i — 5 действительны и положительны.
  */
 public class Main {
     public static void main(String[] args) {
@@ -25,7 +25,7 @@ public class Main {
 
         System.out.println();
         for (int num : mas) {
-            System.out.printf("Число %d при делении на 7 дают остаток 1, 2 или 5 = %b\n", num, MainB.ramainder(num));
+            System.out.printf("Число %d при делении на 7 дают остаток 1, 2 или 5 = %b\n", num, MainB.remainder(num));
         }
     }
 }
