@@ -16,7 +16,7 @@ public class Main {
         int[] mas = new int[10];
 
         for (int i = 0; i < mas.length; i++) {
-            mas[i] = random.nextInt(200);
+            mas[i] = random.nextInt(10);
         }
 
         for (int num : mas) {
@@ -26,6 +26,11 @@ public class Main {
         System.out.println();
         for (int num : mas) {
             System.out.printf("Число %d при делении на 7 дают остаток 1, 2 или 5 = %b\n", num, MainB.remainder(num));
+        }
+
+        System.out.println();
+        for (int num : mas) {
+            System.out.printf("Корень уравнения %d соответсвует решению уравнения х^2 + 3q.i — 5  = %b\n", num, MainC.posNumber(num));
         }
     }
 }
