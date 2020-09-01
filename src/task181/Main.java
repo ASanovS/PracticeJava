@@ -12,7 +12,7 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         Random random = new Random();
-        int[] mas = new int[10];
+        int[] mas = new int[50];
         int sumMultFiveNum = 0;
         int sumOddNegative = 0;
         int sumNumber = 0;
