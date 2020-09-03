@@ -31,7 +31,7 @@ public class Main {
                 if (mas[i] > 0) {
                     sumPlus += mas[i];
                 } else {
-                    coutMinus ++;
+                    coutMinus++;
                 }
             }
         }
