@@ -10,7 +10,7 @@ import java.util.Scanner;
  * b) элементы в каждой из которых одинаковы;
  * c) все элементы которых четны;
  * d) элементы каждой из которых образуют монотонную последовательность (монотонно убывающую или монотонно возрастающую);
- * д) элементы которых образуют симметричные последовательности (палиндромы).
+ * f) элементы которых образуют симметричные последовательности (палиндромы).
  */
 public class Main {
     public static void main(String[] args) {
@@ -21,8 +21,15 @@ public class Main {
 
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length; j++) {
-                matrix[i][j] = random.nextInt(2);
-//                matrix[i][j] = 0;
+                if (i == 0) {
+                    matrix[i][j] = 0;
+                } else if (i == 1) {
+                    matrix[i][j] = 1;
+                } else if (i == 2) {
+                    matrix[i][j] = 2;
+                } else {
+                    matrix[i][j] = random.nextInt(5);
+                }
             }
         }
 
@@ -43,9 +50,9 @@ public class Main {
                 }
             }
             if (countZero == matrix.length) {
-                System.out.println("Строка содержит все числа = 0 № = " + i);
+                System.out.printf("Строка %d содержит все 0\n", i + 1);
             } else {
-                System.out.println("Нет строк содержащих все 0");
+                System.out.printf("В строке %d не содержит всех цифр равных 0\n", i + 1);
             }
         }
 
@@ -59,12 +66,29 @@ public class Main {
                 }
             }
             if (count == matrix.length) {
-                System.out.println("Строка содержит все одинаковые числа № = " + i);
+                System.out.printf("Строка %d содержит все одинаковые числа\n", i + 1);
             } else {
-                System.out.println("Нет строк содержащих все одинаковые цифры");
+                System.out.printf("Строка %d не содержит все одинаковые цифры\n", i + 1);
             }
         }
 
+//        c) все элементы четные
+        System.out.println();
+        for (int i = 0; i < matrix.length; i++) {
+            int countEven = 0;
+            for (int j = 0; j < matrix.length; j++) {
+                if (matrix[i][j] % 2 == 0) {
+                    countEven++;
+                }
+            }
+            if (countEven == matrix.length) {
+                System.out.printf("Строка %d содержит четные элементы\n", i + 1);
+            } else {
+                System.out.printf("Строка %d не содержит всех четных элементов\n", i + 1);
+            }
+        }
 
+//        элементы каждой из которых образуют монотонную последовательность (монотонно убывающую или монотонно возрастающую);
+        System.out.println();
     }
 }
