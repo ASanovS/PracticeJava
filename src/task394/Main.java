@@ -27,7 +27,11 @@ public class Main {
                     matrix[i][j] = 1;
                 } else if (i == 2) {
                     matrix[i][j] = 2;
-                } else {
+                } else if (i == 3) {
+                    matrix[i][j] = j;
+                } else if (i == 4) {
+                    matrix[i][j] = n--;
+                }else {
                     matrix[i][j] = random.nextInt(5);
                 }
             }
@@ -88,7 +92,23 @@ public class Main {
             }
         }
 
-//        элементы каждой из которых образуют монотонную последовательность (монотонно убывающую или монотонно возрастающую);
+//        d) элементы каждой из которых образуют монотонную последовательность (монотонно убывающую или монотонно возрастающую);
         System.out.println();
+        for (int i = 0; i < matrix.length; i++) {
+            int countUp = 1;
+            int countDown = 1;
+            for (int j = 0; j < matrix.length - 1; j++) {
+                if (matrix[i][j] < matrix[i][j + 1]) {
+                    countUp++;
+                } else if (matrix[i][j] > matrix[i][j + 1]) {
+                    countDown++;
+                }
+            }
+            if (countUp == matrix.length) {
+                System.out.printf("Строка № %d монотонно возрастающая\n", i + 1);
+            } else if (countDown == matrix.length) {
+                System.out.printf("Строка № %d монотонно убывающая\n", i + 1);
+            }
+        }
     }
 }
