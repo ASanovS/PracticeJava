@@ -110,5 +110,19 @@ public class Main {
                 System.out.printf("Строка № %d монотонно убывающая\n", i + 1);
             }
         }
+
+//        f) элементы которых образуют симметричные последовательности (палиндромы).
+        for (int i = 0; i < matrix.length; i++) {
+            int number = 0;
+            for (int j = 0; j < matrix.length; j++) {
+                number = number * 10 + matrix[i][j];
+            }
+            int reverse = 0;
+            while (number > 0) {
+                reverse = reverse * 10 + number % 10;
+                number /= 10;
+            }
+            System.out.printf("Число в строке № %d является плоиндромо = %b\n", i, number == reverse);
+        }
     }
 }
