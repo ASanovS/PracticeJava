@@ -62,7 +62,7 @@ public class Main {
         for (int i = 0; i < m; i++) {
             var mimValue = 0;
             for (int j = 0; j < n; j++) {
-                if (mimValue > matrix[i][j]){
+                if (mimValue > matrix[i][j]) {
                     mimValue = matrix[i][j];
                 }
             }
@@ -72,19 +72,36 @@ public class Main {
 //        d) значениям средних арифметических элементов строк;
         for (int i = 0; i < m; i++) {
             int sumElements = 0;
-            int average = 0;
+            int average;
             for (int j = 0; j < n; j++) {
                 sumElements += matrix[i][j];
             }
             average = sumElements / m;
 
             for (int j = 0; j < n; j++) {
-                if (matrix[i][j] == average){
+                if (matrix[i][j] == average) {
                     System.out.printf("В строке №%d елемент строки %d равен среднему арифметическому строки %d\n", i + 1, matrix[i][j], average);
                 }
             }
         }
 
 //        f) разностям наибольших и наименьших значений элементов строк.
+        for (int i = 0; i < m; i++) {
+            int maxValue = 0;
+            int minValue = 0;
+            for (int j = 0; j < n; j++) {
+                if (minValue > matrix[i][j]) {
+                    minValue = matrix[i][j];
+                } else if (maxValue < matrix[i][j]) {
+                    maxValue = matrix[i][j];
+                }
+            }
+
+            for (int j = 0; j < n; j++) {
+                if (matrix[i][j] == maxValue - minValue) {
+                    System.out.printf("В строке №%d елемент строки %d равен разности большего и меньшего элемента строки %d\n", i + 1, matrix[i][j], maxValue - minValue);
+                }
+            }
+        }
     }
 }
