@@ -13,6 +13,7 @@ public class Main {
         int x = scanner.nextInt();
         int y = scanner.nextInt();
 
+
         if (x <= y) {
             x = 0;
             System.out.printf("x = %d, y = %d", x, y);

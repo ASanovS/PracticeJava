@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         int[] mas = {1, 3, 5};
         for (int m : mas) {
-            if (m < 4) {
+            if (m <= 3) {
                 System.out.printf("%d ", m);
             }
         }
