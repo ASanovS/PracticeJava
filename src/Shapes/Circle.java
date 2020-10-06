@@ -8,20 +8,12 @@ public class Circle implements Shape {
     }
 
     @Override
-    public void calculateArea() {
-        if (r <= 0) {
-            System.out.println("Окружность не существует");
-        } else {
-            System.out.println(Math.PI * (r * r));
-        }
+    public double calculateArea() {
+        return Math.PI * (r * r);
     }
 
     @Override
-    public void calculatePerimeter() {
-        if (r <= 0) {
-            System.out.println("Окружность не существует");
-        } else {
-            System.out.println(2 * Math.PI * r);
-        }
+    public double calculatePerimeter() {
+        return 2 * Math.PI * r;
     }
 }

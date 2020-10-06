@@ -10,20 +10,12 @@ public class Rectangle implements Shape {
     }
 
     @Override
-    public void calculateArea() {
-        if (a <= 0 | b <= 0) {
-            System.out.println("Прямоугольник не существует");
-        } else {
-            System.out.println(a * b);
-        }
+    public double calculateArea() {
+        return a * b;
     }
 
     @Override
-    public void calculatePerimeter() {
-        if (a <= 0 | b <= 0) {
-            System.out.println("Прямоугольник не существует");
-        } else {
-            System.out.println((a + b) * 2);
-        }
+    public double calculatePerimeter() {
+        return (a + b) * 2;
     }
 }

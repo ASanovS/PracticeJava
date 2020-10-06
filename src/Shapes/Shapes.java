@@ -1,6 +1,6 @@
 package Shapes;
 
-public enum ShapeEnum {
+public enum Shapes {
     CIRCLE,
     RECTANGLE,
     SQUARE,

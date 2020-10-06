@@ -8,20 +8,12 @@ public class Square implements Shape {
     }
 
     @Override
-    public void calculateArea() {
-        if (a <= 0) {
-            System.out.println("Квадрат не существует");
-        } else {
-            System.out.println(a * a);
-        }
+    public double calculateArea() {
+        return a * a;
     }
 
     @Override
-    public void calculatePerimeter() {
-        if (a <= 0) {
-            System.out.println("Квадрат не существует");
-        } else {
-            System.out.println(a * 4);
-        }
+    public double calculatePerimeter() {
+        return a * 4;
     }
 }
